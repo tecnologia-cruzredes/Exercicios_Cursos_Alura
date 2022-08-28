@@ -1,0 +1,44 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    // Função desenha quadrado, passagem por parametros (x,y,cor)
+    // x eixo vertical, y eixo horizontal
+    function desenhaQuadrado(x, y , cor) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50); // 50 é o tamanho de cada quadrado
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, 50); // este faz a borda
+
+}
+
+/*
+var x = 0;
+    while (x < 600) {
+
+desenhaQuadrado(x, 0, 'red');
+desenhaQuadrado(x,50,'blue');
+desenhaQuadrado(x,100,'yellow');
+desenhaQuadrado(x,150,'blue');
+desenhaQuadrado(x,200,'green');
+desenhaQuadrado(x,250,'black');
+desenhaQuadrado(x,300,'yellow');
+desenhaQuadrado(x,350,'blue');
+x = x + 50;
+    }
+*/
+
+for(var x = 0; x <= 600; x = x + 50) {
+desenhaQuadrado(x, 0, 'yellow');
+desenhaQuadrado(x,50,'blue');
+desenhaQuadrado(x,100,'yellow');
+desenhaQuadrado(x,150,'blue');
+desenhaQuadrado(x,200,'green');
+desenhaQuadrado(x,250,'blue');
+desenhaQuadrado(x,300,'yellow');
+desenhaQuadrado(x,350,'red');
+}
+</script>

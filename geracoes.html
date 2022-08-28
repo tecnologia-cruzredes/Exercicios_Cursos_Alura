@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+<script>
+
+	function pulalinha(){
+		document.write("<br>");
+	}
+
+	function titulo(){
+		document.write("<h1>" + titpag + "</h1>")
+	}
+
+	var titpag = "Média Gerações desde 1500 apartir da chagada dos Protugueses" 
+
+
+	var anoInicial = 1500
+	var anoAtual = 2021
+
+
+	var totalAnos = anoAtual - anoInicial
+	var mediaGeracoes = totalAnos/28
+
+titulo();
+
+	document.write("Em " + totalAnos + " anos, são em média " + Math.round(mediaGeracoes) + " Gerações, calculadas a cada 28 anos ! ");
+
+</script>

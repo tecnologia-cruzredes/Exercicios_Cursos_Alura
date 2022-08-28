@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var nPar = parseInt(prompt("Informe um número Par e te mostrarei os proximos ate 1000 ;-)"));
+
+    while(nPar <= 1000) {
+    mostra("Este é Par" +   nPar);
+    nPar = nPar + 2;
+    }
+
+    mostra("FIM")
+ </script> 

@@ -1,0 +1,32 @@
+<canvas width="550" height="800"></canvas>    CREEPER **
+
+<script>
+    //variaveis quadro branco
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    
+    //Central quadro  (Pos.Hor, Pos.Ver,Larg.Hor,Larg.Ver)
+    pincel.fillStyle = 'darkgreen';
+    pincel.fillRect(0, 0, 600, 500);
+    
+    //Retang 01 OLho esquerdo
+    pincel.fillStyle = 'black';
+    pincel.fillRect(69, 65, 120, 135);
+
+    //Retang 02  Olho Direito
+    pincel.fillStyle = 'black';
+    pincel.fillRect(355, 65, 120, 135);
+    
+    //Nariz Central
+    pincel.fillStyle = 'black';
+    pincel.fillRect(190, 200, 165, 145);
+
+    //Parte Boca E  
+    pincel.fillStyle = 'black';
+    pincel.fillRect(150, 300, 45, 110);
+
+    //Parte Boca D
+    pincel.fillStyle = 'black';
+    pincel.fillRect(350, 300, 45, 110);
+
+</script>

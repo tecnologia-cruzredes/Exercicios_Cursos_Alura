@@ -1,0 +1,81 @@
+<meta charset="UTF-8">
+
+<html>
+<head>   
+   
+       <h1> IMC - Classificação do índice de massa corporal</h1>
+</head>
+
+<Body>
+   IMC = peso (em quilos) ÷ altura² (em metros)
+   <br>,<br>
+
+Os resultados do IMC são interpretados da seguinte forma:<br>,<br>
+
+
+Os resultados do IMC são interpretados da seguinte forma:<br>
+Baixo peso muito grave = abaixo de 16 kg/m².<br>
+Baixo peso grave = entre 16 e 16,99 kg/m².<br>
+Baixo peso = entre 17 e 18,49 kg/m².<br>
+Peso normal = entre 18,50 e 24,99 kg/m².<br>
+Sobrepeso = entre 25 e 29,99 kg/m².<br>
+Obesidade grau I = entre 30 e 34,99 kg/m².<br>
+Obesidade grau II = entre 35 e 39,99 kg/m².<br>
+Obesidade grau III (obesidade mórbida) = maior que 40 kg/m².<br>,<br>,<br>,<br>,<br>
+</Body>
+
+</html>
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function calculaImc(altura, peso) {
+
+        return peso / (altura * altura);
+}
+
+
+
+var nome = prompt("Informe o seu nome");
+var alturaInformada = prompt(nome + ", informe sua altura");
+var pesoInformado = prompt(nome + ", informe seu peso");
+
+var imc = calculaImc(alturaInformada, pesoInformado);
+
+
+mostra(nome + ", o seu IMC é " + imc);
+
+if(imc < 18.5) {
+
+    mostra("Você está abaixo do recomendado");
+
+}
+
+if(imc > 35) {
+
+    mostra("Você está acima do recomendado");
+}
+
+if(imc >= 18.5) {
+
+    if(imc <= 35) {
+
+        mostra("Seu IMC está excelente!");
+
+    }
+
+}
+
+</script>
+

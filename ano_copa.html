@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    var uano = parseInt(prompt("Qual ano aconteceu a ultima Copa do Mundo??"));
+    var anoCopa = 1930;
+
+
+    while(anoCopa <= 2018) {
+
+    mostra("Teve compa em" + uano);
+    anoCopa = anoCopa + 4;
+    }
+
+    mostra("FIM")
+ </script>   

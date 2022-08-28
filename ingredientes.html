@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+
+<input />
+<button>Adicionar ingrediente</button>
+<button onclick="(alert(ingredientes))">Mostrar Lista</button>
+
+<script>
+  var ingredientes = [];
+  var input = document.querySelector("input");
+  input.focus();
+  var button = document.querySelector("button");
+  button.onclick = verificaIngrediente;
+
+  function insereIngrediente(ing) {
+    var repetido = false;
+    for (var posicao = 0; posicao <= ingredientes.length; posicao++) {
+      if (ingredientes[posicao] == ing) {
+        alert("Ingrediente já existente na lista!");
+        repetido = true;
+        break;
+      }
+    }
+    if (repetido == false) {
+      ingredientes.push(ing);
+      alert("Ingrediente " + ing + " inserido!");
+    }
+    console.log(ingredientes);
+  }
+
+  function verificaIngrediente() {
+    var x = input.value;
+    if (isNaN(x)) {
+      insereIngrediente(x);
+    } else {
+      alert("Digite corretamente o ingrediente!");
+    }
+    input.value = "";
+    input.focus();
+  }
+</script>
