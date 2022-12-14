@@ -1,0 +1,68 @@
+<canvas width="600" height="400"></canvas>
+<script>
+
+
+  var tela = document.querySelector('canvas');
+  var pincel = tela.getContext('2d');
+
+  pincel.fillStyle = 'gray';
+  pincel.fillRect(0, 0, 600, 400);
+
+  var cores = ['blue','red','green'];
+  var indiceCorAtual = 0; //inicia com blue
+  var raio = 10;
+
+  function clicaBolinha(clicou) {
+      var x = clicou.pageX - tela.offsetLeft;
+      var y = clicou.pageY - tela.offsetTop;
+      //var raio = 10; // Bolinha vai sempre cresentando 10
+      
+      /*
+      if (event.shiftKey && event.altKey ) {
+        alert("Aperte somente uma tecla por vez!!")
+        
+      }else if (enevt.shiftKey && raio + 10 <=40){
+        raio = raio + 10 //raio passa a valer 20
+      }else if (enevt.altKey && raio - 5 >=10){
+        raio = raio - 5
+      }
+  */
+  if (event.shiftKey) {
+        raio = raio + 10; //raio passa a valer 20
+      }
+      
+      pincel.fillStyle = cores[indiceCorAtual];
+      pincel.beginPath(); 
+      pincel.arc(x , y, raio, 0, 2*3.14);
+      pincel.fill();
+    
+      console.log("posição do clique: " + x + ',' + y);
+    
+    }
+  tela.onclick = clicaBolinha;
+  tela.oncontextmenu = mudaCor;
+    
+
+function mudaCor() {
+  indiceCorAtual++;
+  if (indiceCorAtual >= cores.length) {
+    indiceCorAtual = 0; // volta para a primeira cor, azul
+  }
+  return false; // para não exibir o menu padrão do canvas
+  console.log(tela.oncontextmenu);
+
+  
+}
+
+
+
+</script>
+<body> <p></p>
+  Game da Bolinha; <p></p>
+
+* Cliacr com esquero p/ Criar Bolinha <p></p>
+* Clicar com Direito p/ Mudar Cor <p></p>
+* Clicar com esquero Segurando "SHIFT" p/ Aumentar tamanho da Bolinha
+
+</body>
+
